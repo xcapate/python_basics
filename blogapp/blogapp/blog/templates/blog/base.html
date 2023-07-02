@@ -1,0 +1,49 @@
+{% load blog_tags %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+<link href="{% static "blog/css/blog.css" %}" rel="stylesheet">
+</head>
+<body>
+ <nav class="navbar">
+    <div class="logo navbar-item">
+        <h1>Geek Hamster</h1>
+    </div>
+    <div class="links navbar-item">
+      <a href="/learn-html.html">HTML</a> | <a href="/learn-css.html">CSS</a> | <a href="/learn-javascript.html">JavaScript</a> | <a href="/learn-php.html">PHP</a> |
+    </div>
+</nav>
+<div class="container">
+    <div id="content">
+
+        {% block content %}
+        {% endblock %}
+        
+    </div>
+    <div id="sidebar">
+        <p>
+            {% post_count_all %} articles written till now, {% post_count %} published.
+        </p>
+        <h3>Latest posts</h3>
+        {% show_latest_posts 3 %}
+
+        <h3>Most commented posts</h3>
+        {% get_most_commented_posts as most_commented_posts %}
+        <ul>
+            {% for post in most_commented_posts %}
+                <li>
+                    <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+<div id="footer">
+    All rights reserved Geek Hamster 2019
+</div>
+</body>
+</html>

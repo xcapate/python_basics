@@ -1,0 +1,46 @@
+{
+    "host": "https://briefbox-test.dxc.com/api/integration/external/launchpad/update?person-format=email",
+    "ContentType": "application/json",
+    "method": "POST",
+    "mappings": {
+        "update":{
+            "type":"Deal",
+            "Name":"agreement://name",
+            "CustomerName": "tags://Account_Name__c",
+            "UniqueId": "agreement://name",
+            "SubCategory": "tags://Request_Type__c",
+            "Region": "tags://Legal_Routing_Region__c",
+            "Country": "tags://Customer_Location_Country__c",            
+            "Category": "tags://Deal_Category_c",
+            "Value": "tags://Total_Opportunity_Value__c",
+            "IsPublicSector": "tags://Public_Sector__c",
+            "Activity": "tags://Status_c",
+            "links":{
+                "SalesForceOportunity":["tags://Opportunity_ID_Formula__c"],
+                "ContractRoomRequest":["agreement://cid"],
+                "WorkflowRequest":["tags://BB_Workflow_Request_ID_Number"]
+            },
+            "Industry": "tags://Industry_Segment__c",
+            "BusinessTeam":{
+                "Name":"tags://Opportunity_Owner__c",
+                "PersonId": "tags://Opportunity_Owner_Email_c"
+            },
+            "Team":{
+                "Name":"tags://Opportunity_Owner__c",
+                "PersonId": "tags://Opportunity_Owner_Email_c"
+            },
+            "MilestoneDate": "tags://Response_By_Date",
+            "CreatedDate": "agreement://created",
+            "Background": "tags://Comments__c",
+            "Owner": {  
+                "personId": "agreement://counterparties.email",
+                "name": "agreement://counterparties.full_name"
+            }
+        },
+        "Request":{
+            "Id":"tags://BB_Workflow_Request_ID_Number",
+            "Language":"tags://What_language_applies__c"
+        }
+
+    }
+}

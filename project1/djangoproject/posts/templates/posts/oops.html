@@ -1,0 +1,18 @@
+{% extends 'posts/layout.html' %}
+
+{% block content%}
+    <div class="card">
+        <div class="card-body">
+            <div class="card-header">
+                <h1>This is embarrassing! </h1>
+            </div>
+            <div class="card-text p-5">
+                {{error}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col"><a class="btn btn-default" href="/posts">Volver</a></div>
+    </div>
+{% endblock %}
+

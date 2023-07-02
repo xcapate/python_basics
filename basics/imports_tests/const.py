@@ -1,0 +1,12 @@
+# Tag types
+TEXT_TAG_TYPE = "text"
+ESSAY_TAG_TYPE = "essay"
+NUMBER_TAG_TYPE = "number"
+DATE_TAG_TYPE = "date"
+DROPDOWN_TAG_TYPE = "dropdown"
+CHECKLIST_TAG_TYPE = "chlist"
+GROUP_TAG_TYPE = "group"
+ATTACHMENT_TAG_TYPE = 'attachment'
+FORMULA_TAG_TYPE = 'formula'
+SIGNATURE_TAG_TYPE = 'signature'
+SMART_TAG_TYPE = 'smart'

@@ -1,0 +1,27 @@
+body{margin:0px; font-family: Georgia, 'Times New Roman', Times, serif}
+h1{ font-size:60px; margin:3px;}
+#content { background:ivory; padding: 12px 12px 8px 8px}
+div.post-item{border-bottom: 1px solid #ddd; padding:8px; }
+.post-item > h2 > a:link,a:hover,a:visited,a:active {color: green; text-decoration: none;}
+
+
+.navbar{ background:black; padding: 12px; width:100%}
+.navbar > .navbar-item{ display: inline-block;}
+.navbar > .navbar-item > h1 {color:white; }
+.navbar > .navbar-item > a {color:white}
+.logo{width:40%}
+.posts-list-title{margin:3px;}
+
+.posts-list-title::before{ content: ">>" }
+
+#content, #sidebar{  display: table-cell}
+
+#sidebar{ padding:12px; margin:0px;}
+
+#footer{padding:20px; text-align: center; background-color:#94876e; color: #ddd}
+
+.pagination{padding:12px; background-color: burlywood; margin:5px; border-radius:8px;}
+
+.comment{margin:15px; margin-left:0px; margin-top:15px; }
+.comment > .info{font-size:x-small; font-weight:bold}
+.comment{ background-color: white; border-radius: 20px; padding:10px}

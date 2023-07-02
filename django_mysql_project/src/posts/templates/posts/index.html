@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1 class="text-center">{{title}}</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item bg-light font-weight-bold">List of recent Posts</li>
+        {% for post in posts %}
+            <li class="list-group-item"><a href="details/{{post.id}}">{{post.title}}</a></li>
+        {% endfor %}
+
+    </ul>
+{% endblock %}

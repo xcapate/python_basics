@@ -1,0 +1,41 @@
+
+.bg-eco{
+    background-color: mediumseagreen;
+}
+
+a:visited,a:active,a:hover,a:link{color:mediumseagreen}
+
+.navbar-light .navbar-nav .nav-link {
+    color:#f1e899;
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+    color:#000;
+}
+
+.navbar-light .navbar-brand{
+    color:#f1e899;
+}
+
+
+#login_form{
+    width:500px;
+    text-align: center
+}
+
+ul.messages{
+    list-style-type:none;
+    list-style: none;
+    margin:8px;
+    width: 400px;
+}
+ul.messages > li {
+    list-style-type:none;
+    list-style: none;
+}
+
+ul.messages > li.success{
+    padding:10px;
+    border:solid 1px lightgray;
+    background-color: khaki
+}
